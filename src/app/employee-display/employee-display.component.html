@@ -1,0 +1,16 @@
+<div class="row">
+
+  <div class="col s6">
+    <section class="card">
+      <div class="card-content" *ngIf="employee">
+        <div class="card-title">Name: {{employee.first_name}} {{employee.last_name}}</div>
+        <p>Email: <b>{{employee.email}}</b></p>
+        <p>Hours Worked: <b>{{employee.hours_worked}}</b></p>
+        <p>Hourly Wage: <b>{{employee.hourly_wage}}</b></p>
+        <hr>
+        <a [routerLink]="['/employees']">Back to list</a>
+      </div>
+    </section>
+  </div>
+
+</div>
