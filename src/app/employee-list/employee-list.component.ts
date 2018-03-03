@@ -8,9 +8,9 @@ import { EmployeeLoader, Employee } from '../employee-loader.service';
   templateUrl: './employee-list.component.html'
 })
 export class EmployeeListComponent {
-  list$: Observable<Employee[]>;
+  list: Observable<Employee[]>;
 
   constructor(loader: EmployeeLoader) {
-    this.list$ = loader.getList();
+    this.list = loader.getList();
   }
 }

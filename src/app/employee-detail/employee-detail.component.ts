@@ -10,10 +10,10 @@ import { EmployeeLoader, Employee } from '../employee-loader.service';
   templateUrl: './employee-detail.component.html'
 })
 export class EmployeeDetailComponent {
-  theEmployee$: Observable<Employee>;
+  theEmployee: Observable<Employee>;
 
   constructor(route: ActivatedRoute, loader: EmployeeLoader) {
-    this.theEmployee$ = route.params.pipe(
+    this.theEmployee = route.params.pipe(
       map(params => params['employeeId']),
       switchMap(id => loader.getDetails(id)));
   }
