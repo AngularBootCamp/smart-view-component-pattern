@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 
-import { EmployeeLoader, Employee } from '../employee-loader.service';
+import { Employee, EmployeeLoader } from '../employee-loader.service';
 
 @Component({
   selector: 'employee-detail',
