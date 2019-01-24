@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, shareReplay } from 'rxjs/operators';
 
 export interface Employee {
   id: number;
@@ -20,9 +20,28 @@ const API_URL = 'https://api.angularbootcamp.com';
 export class EmployeeLoader {
   constructor(private http: HttpClient) { }
 
-  getList(): Observable<Employee[]> {
+  getEasternStoreEmployees(): Observable<Employee[]> {
     return this.http.get<Employee[]>(API_URL + '/employees')
-      .pipe(map(longList => longList.slice(0, 9)));
+      .pipe(
+        map(longList => longList.slice(0, 9)),
+        shareReplay(1)
+      );
+  }
+
+  getWesternStoreEmployees(): Observable<Employee[]> {
+    return this.http.get<Employee[]>(API_URL + '/employees')
+      .pipe(
+        map(longList => longList.slice(9, 18)),
+        shareReplay(1)
+      );
+  }
+
+  getAllEmployees(): Observable<Employee[]> {
+    return this.http.get<Employee[]>(API_URL + '/employees')
+      .pipe(
+        map(longList => longList.slice(1, 18)),
+        shareReplay(1)
+      );
   }
 
   getDetails(employeeId: number): Observable<Employee> {

@@ -1,0 +1,7 @@
+<h5>{{title}}</h5>
+<employee-display
+  *ngFor="let emp of employees"
+  [employee]="emp"
+  [class.selected]="employeeIsSelected(emp)"
+  (click)="employeeClicked.emit(emp)"
+></employee-display>

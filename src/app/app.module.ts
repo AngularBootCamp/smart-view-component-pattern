@@ -1,24 +1,30 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { EmployeeComparisonComponent } from './employee-comparison/employee-comparison.component';
 import { EmployeeDisplayComponent } from './employee-display/employee-display.component';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeExplorerComponent } from './employee-explorer/employee-explorer.component';
+import { IndividualComparatorComponent } from './individual-comparator/individual-comparator.component';
+import { StoreComparatorComponent } from './store-comparator/store-comparator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeListComponent,
-    EmployeeDetailComponent,
-    EmployeeDisplayComponent
+    EmployeeComparisonComponent,
+    EmployeeDisplayComponent,
+    EmployeeExplorerComponent,
+    StoreComparatorComponent,
+    IndividualComparatorComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   bootstrap: [AppComponent]
 })
