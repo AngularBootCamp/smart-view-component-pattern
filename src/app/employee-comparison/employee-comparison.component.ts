@@ -8,7 +8,7 @@ import { Employee } from '../employee-loader.service';
   styleUrls: ['./employee-comparison.component.css']
 })
 export class EmployeeComparisonComponent {
-  @Input() theFirstEmployee: Employee;
-  @Input() theSecondEmployee: Employee;
+  @Input() theFirstEmployee: Employee | undefined;
+  @Input() theSecondEmployee: Employee | undefined;
   @Output() reverse = new EventEmitter<void>();
 }

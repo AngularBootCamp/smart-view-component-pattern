@@ -7,5 +7,5 @@ import { Employee } from '../employee-loader.service';
   templateUrl: './employee-display.component.html'
 })
 export class EmployeeDisplayComponent {
-  @Input() employee: Employee;
+  @Input() employee: Employee | undefined;
 }

@@ -10,10 +10,10 @@ import { Employee } from '../employee-loader.service';
 })
 export class EmployeeExplorerComponent {
   @Input() title: string = 'Employees'; // Provide a default value if the user of this component doesn't
-  @Input() employees: Employee[];
+  @Input() employees: Employee[] = [];
   @Input() selectedEmployees: Employee[] = [];
   @Output() employeeClicked = new EventEmitter<Employee>();
-  // Implementing a new feature in to this view component improves everywhere that it is used
+  // Implementing a new feature in this view component improves everywhere that it is used
   // In this case, all three lists of employees are made searchable by adding this feature
   // Make sure to update the employee-explorer.component.html as well to see it in action
   // filter = new FormControl('');

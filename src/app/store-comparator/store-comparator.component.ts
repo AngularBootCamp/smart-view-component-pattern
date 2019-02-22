@@ -23,8 +23,8 @@ export class StoreComparatorComponent {
       })
     );
 
-  easternEmployee: Employee;
-  westernEmployee: Employee;
+  easternEmployee: Employee | undefined;
+  westernEmployee: Employee | undefined;
 
   constructor(private el: EmployeeLoader) { }
 
