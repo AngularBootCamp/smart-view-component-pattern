@@ -9,24 +9,22 @@ import { Employee, EmployeeLoader } from '../employee-loader.service';
   styleUrls: ['./store-comparator.component.css']
 })
 export class StoreComparatorComponent {
-  easternEmployeeList = this.el.getEasternStoreEmployees()
-    .pipe(
-      tap(list => {
-        this.easternEmployee = list[0];
-      })
-    );
+  easternEmployeeList = this.el.getEasternStoreEmployees().pipe(
+    tap(list => {
+      this.easternEmployee = list[0];
+    })
+  );
 
-  westernEmployeeList = this.el.getWesternStoreEmployees()
-    .pipe(
-      tap(list => {
-        this.westernEmployee = list[0];
-      })
-    );
+  westernEmployeeList = this.el.getWesternStoreEmployees().pipe(
+    tap(list => {
+      this.westernEmployee = list[0];
+    })
+  );
 
   easternEmployee: Employee | undefined;
   westernEmployee: Employee | undefined;
 
-  constructor(private el: EmployeeLoader) { }
+  constructor(private el: EmployeeLoader) {}
 
   setLeftEmployee(emp: Employee) {
     this.easternEmployee = emp;

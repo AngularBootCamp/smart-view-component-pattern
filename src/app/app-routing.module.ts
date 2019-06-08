@@ -7,14 +7,19 @@ import { StoreComparatorComponent } from './store-comparator/store-comparator.co
 const routes: Routes = [
   { path: '', redirectTo: 'store-comparator', pathMatch: 'full' },
   { path: 'store-comparator', component: StoreComparatorComponent },
-  { path: 'individual-comparator', component: IndividualComparatorComponent }
+  {
+    path: 'individual-comparator',
+    component: IndividualComparatorComponent
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    useHash: true,
-    scrollPositionRestoration: 'enabled'
-  })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      useHash: true,
+      scrollPositionRestoration: 'enabled'
+    })
+  ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

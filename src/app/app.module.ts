@@ -28,4 +28,4 @@ import { StoreComparatorComponent } from './store-comparator/store-comparator.co
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

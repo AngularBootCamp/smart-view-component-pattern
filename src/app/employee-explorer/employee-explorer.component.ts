@@ -1,4 +1,9 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output
+} from '@angular/core';
 // import { FormControl } from '@angular/forms';
 
 import { Employee } from '../employee-loader.service';
@@ -9,7 +14,7 @@ import { Employee } from '../employee-loader.service';
   styleUrls: ['./employee-explorer.component.css']
 })
 export class EmployeeExplorerComponent {
-  @Input() title: string = 'Employees'; // Provide a default value if the user of this component doesn't
+  @Input() title = 'Employees'; // Provide a default value if the user of this component doesn't
   @Input() employees: Employee[] = [];
   @Input() selectedEmployees: Employee[] = [];
   @Output() employeeClicked = new EventEmitter<Employee>();
