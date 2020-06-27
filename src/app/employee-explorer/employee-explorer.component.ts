@@ -32,7 +32,7 @@ export class EmployeeExplorerComponent {
   //     return [];
   //   }
   //   return this.employees.filter(e =>
-  //     e.first_name.toLowerCase().includes(this.filter.value.toLowerCase()) ||
-  //     e.last_name.toLowerCase().includes(this.filter.value.toLowerCase()));
+  //     e.firstName.toLowerCase().includes(this.filter.value.toLowerCase()) ||
+  //     e.lastName.toLowerCase().includes(this.filter.value.toLowerCase()));
   // }
 }
