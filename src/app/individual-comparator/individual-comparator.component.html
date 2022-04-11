@@ -5,7 +5,7 @@
   (reverse)="reverseComparison()"
 ></employee-comparison>
 <employee-explorer
-  [employees]="employeeList | async"
+  [employees]="(employeeList | async) ?? []"
   [selectedEmployees]="comparedEmployees"
   (employeeClicked)="updateComparison($event)"
 ></employee-explorer>

@@ -17,13 +17,13 @@ import { StoreComparatorComponent } from './store-comparator/store-comparator.co
     EmployeeComparisonComponent,
     EmployeeDisplayComponent,
     EmployeeExplorerComponent,
-    StoreComparatorComponent,
-    IndividualComparatorComponent
+    IndividualComparatorComponent,
+    StoreComparatorComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule,
     ReactiveFormsModule
   ],
   bootstrap: [AppComponent]
