@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { tap } from 'rxjs/operators';
+import { tap } from 'rxjs';
 
 import { Employee, EmployeeLoader } from '../employee-loader.service';
 
