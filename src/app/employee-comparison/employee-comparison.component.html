@@ -1,5 +1,7 @@
-<span class="flex">
-  <employee-display [employee]="theFirstEmployee"></employee-display>
-  <span class="vs" (click)="reverse.emit()">VS</span>
-  <employee-display [employee]="theSecondEmployee"></employee-display>
-</span>
+<app-employee-display
+  [employee]="theFirstEmployee"
+></app-employee-display>
+<button (click)="reverse.emit()">VS</button>
+<app-employee-display
+  [employee]="theSecondEmployee"
+></app-employee-display>

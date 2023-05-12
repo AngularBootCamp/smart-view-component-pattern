@@ -9,9 +9,9 @@ import {
 import { Employee } from '../employee-loader.service';
 
 @Component({
-  selector: 'employee-explorer',
+  selector: 'app-employee-explorer',
   templateUrl: './employee-explorer.component.html',
-  styleUrls: ['./employee-explorer.component.css']
+  styleUrls: ['./employee-explorer.component.scss']
 })
 export class EmployeeExplorerComponent {
   @Input() title = 'Employees'; // Provide a default value if the user of this component doesn't

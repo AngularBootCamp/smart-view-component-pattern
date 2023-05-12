@@ -8,9 +8,9 @@ import {
 import { Employee } from '../employee-loader.service';
 
 @Component({
-  selector: 'employee-comparison',
+  selector: 'app-employee-comparison',
   templateUrl: './employee-comparison.component.html',
-  styleUrls: ['./employee-comparison.component.css']
+  styleUrls: ['./employee-comparison.component.scss']
 })
 export class EmployeeComparisonComponent {
   @Input() theFirstEmployee: Employee | undefined;

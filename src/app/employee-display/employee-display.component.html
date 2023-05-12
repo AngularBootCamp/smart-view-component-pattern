@@ -1,16 +1,19 @@
-<section class="card">
-  <div class="card-content" *ngIf="employee">
-    <div class="card-title">
+<article>
+  <ng-container *ngIf="employee">
+    <header>
       Name: {{ employee.firstName }} {{ employee.lastName }}
-    </div>
+    </header>
     <p>
-      Email: <strong>{{ employee.email }}</strong>
+      Email:
+      <strong>{{ employee.email }}</strong>
     </p>
     <p>
-      Hours Worked: <strong>{{ employee.hoursWorked }}</strong>
+      Hours Worked:
+      <strong>{{ employee.hoursWorked }}</strong>
     </p>
     <p>
-      Hourly Wage: <strong>{{ employee.hourlyWage }}</strong>
+      Hourly Wage:
+      <strong>{{ employee.hourlyWage }}</strong>
     </p>
-  </div>
-</section>
+  </ng-container>
+</article>

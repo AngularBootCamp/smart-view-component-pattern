@@ -4,7 +4,7 @@ import { tap } from 'rxjs';
 import { Employee, EmployeeLoader } from '../employee-loader.service';
 
 @Component({
-  selector: 'individual-comparator',
+  selector: 'app-individual-comparator',
   templateUrl: './individual-comparator.component.html'
 })
 export class IndividualComparatorComponent {

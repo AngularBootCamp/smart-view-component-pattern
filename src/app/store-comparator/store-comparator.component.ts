@@ -4,9 +4,9 @@ import { tap } from 'rxjs';
 import { Employee, EmployeeLoader } from '../employee-loader.service';
 
 @Component({
-  selector: 'store-comparator',
+  selector: 'app-store-comparator',
   templateUrl: './store-comparator.component.html',
-  styleUrls: ['./store-comparator.component.css']
+  styleUrls: ['./store-comparator.component.scss']
 })
 export class StoreComparatorComponent {
   easternEmployeeList = this.el.getEasternStoreEmployees().pipe(
