@@ -1,3 +1,4 @@
+import { NgFor } from '@angular/common';
 import {
   Component,
   EventEmitter,
@@ -6,12 +7,15 @@ import {
 } from '@angular/core';
 // import { FormControl } from '@angular/forms';
 
+import { EmployeeDisplayComponent } from '../employee-display/employee-display.component';
 import { Employee } from '../employee-loader.service';
 
 @Component({
   selector: 'app-employee-explorer',
   templateUrl: './employee-explorer.component.html',
-  styleUrls: ['./employee-explorer.component.scss']
+  styleUrls: ['./employee-explorer.component.scss'],
+  standalone: true,
+  imports: [NgFor, EmployeeDisplayComponent]
 })
 export class EmployeeExplorerComponent {
   @Input() title = 'Employees'; // Provide a default value if the user of this component doesn't
