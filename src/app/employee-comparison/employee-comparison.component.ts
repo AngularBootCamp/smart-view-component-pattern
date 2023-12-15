@@ -11,12 +11,12 @@ import { Employee } from '../employee-loader.service';
 @Component({
   selector: 'app-employee-comparison',
   templateUrl: './employee-comparison.component.html',
-  styleUrls: ['./employee-comparison.component.scss'],
+  styleUrl: './employee-comparison.component.scss',
   standalone: true,
   imports: [EmployeeDisplayComponent]
 })
 export class EmployeeComparisonComponent {
-  @Input() theFirstEmployee: Employee | undefined;
-  @Input() theSecondEmployee: Employee | undefined;
+  @Input({ required: true }) theFirstEmployee: Employee | undefined;
+  @Input({ required: true }) theSecondEmployee: Employee | undefined;
   @Output() reverse = new EventEmitter<void>();
 }

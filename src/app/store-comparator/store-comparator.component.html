@@ -2,7 +2,7 @@
 <app-employee-comparison
   [theFirstEmployee]="easternEmployee"
   [theSecondEmployee]="westernEmployee"
-></app-employee-comparison>
+/>
 <hr />
 <div class="explorers">
   <app-employee-explorer
@@ -10,11 +10,11 @@
     [employees]="(easternEmployeeList | async) ?? []"
     [selectedEmployees]="easternEmployee ? [easternEmployee] : []"
     (employeeClicked)="setLeftEmployee($event)"
-  ></app-employee-explorer>
+  />
   <app-employee-explorer
     title="Western Store"
     [employees]="(westernEmployeeList | async) ?? []"
     [selectedEmployees]="westernEmployee ? [westernEmployee] : []"
     (employeeClicked)="setRightEmployee($event)"
-  ></app-employee-explorer>
+  />
 </div>

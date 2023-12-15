@@ -10,5 +10,5 @@ import { Employee } from '../employee-loader.service';
   imports: [NgIf]
 })
 export class EmployeeDisplayComponent {
-  @Input() employee: Employee | undefined;
+  @Input({ required: true }) employee: Employee | undefined;
 }

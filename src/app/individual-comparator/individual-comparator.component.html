@@ -3,9 +3,9 @@
   [theFirstEmployee]="comparedEmployees[0]"
   [theSecondEmployee]="comparedEmployees[1]"
   (reverse)="reverseComparison()"
-></app-employee-comparison>
+/>
 <app-employee-explorer
   [employees]="(employeeList | async) ?? []"
   [selectedEmployees]="comparedEmployees"
   (employeeClicked)="updateComparison($event)"
-></app-employee-explorer>
+/>

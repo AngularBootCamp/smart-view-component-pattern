@@ -13,14 +13,16 @@ import { Employee } from '../employee-loader.service';
 @Component({
   selector: 'app-employee-explorer',
   templateUrl: './employee-explorer.component.html',
-  styleUrls: ['./employee-explorer.component.scss'],
+  styleUrl: './employee-explorer.component.scss',
   standalone: true,
   imports: [NgFor, EmployeeDisplayComponent]
 })
 export class EmployeeExplorerComponent {
-  @Input() title = 'Employees'; // Provide a default value if the user of this component doesn't
-  @Input() employees: Employee[] = [];
-  @Input() selectedEmployees: Employee[] = [];
+  // Note that this one isn't required - the default value is used in
+  // one place
+  @Input() title = 'Employees';
+  @Input({ required: true }) employees!: Employee[];
+  @Input({ required: true }) selectedEmployees!: Employee[];
   @Output() employeeClicked = new EventEmitter<Employee>();
   // Implementing a new feature in this view component improves everywhere that it is used
   // In this case, all three lists of employees are made searchable by adding this feature

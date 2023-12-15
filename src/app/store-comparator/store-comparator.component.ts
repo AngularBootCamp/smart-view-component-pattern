@@ -8,7 +8,7 @@ import { Employee, EmployeeLoader } from '../employee-loader.service';
 
 @Component({
   templateUrl: './store-comparator.component.html',
-  styleUrls: ['./store-comparator.component.scss'],
+  styleUrl: './store-comparator.component.scss',
   standalone: true,
   imports: [
     EmployeeComparisonComponent,
