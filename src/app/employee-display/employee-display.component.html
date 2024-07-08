@@ -1,5 +1,5 @@
 <article>
-  <ng-container *ngIf="employee">
+  @if (employee) {
     <header>
       Name: {{ employee.firstName }} {{ employee.lastName }}
     </header>
@@ -15,5 +15,5 @@
       Hourly Wage:
       <strong>{{ employee.hourlyWage }}</strong>
     </p>
-  </ng-container>
+  }
 </article>

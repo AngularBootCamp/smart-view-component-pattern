@@ -1,4 +1,3 @@
-import { NgFor } from '@angular/common';
 import {
   Component,
   EventEmitter,
@@ -15,7 +14,7 @@ import { Employee } from '../employee-loader.service';
   templateUrl: './employee-explorer.component.html',
   styleUrl: './employee-explorer.component.scss',
   standalone: true,
-  imports: [NgFor, EmployeeDisplayComponent]
+  imports: [EmployeeDisplayComponent]
 })
 export class EmployeeExplorerComponent {
   // Note that this one isn't required - the default value is used in
